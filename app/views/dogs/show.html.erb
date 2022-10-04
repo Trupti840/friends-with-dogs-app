@@ -1,0 +1,11 @@
+<h1><%= @dog.name %></h1>
+<%= link_to 'Edit', edit_dog_path(@dog) %>
+<p><b>Breed:</b> <%= @dog.breed %></p>
+<p><b>Age:</b> <%= @dog.age %></p>
+
+<h4>Owner: <%= link_to @dog.owner.to_s, owner_path(@dog.owner) %></h4>
+
+<p><%= link_to 'Delete', @dog, method: 'delete', data: { confirm: 'Are you sure?' }%></p>
+<p><%= link_to 'Go back to all dogs', dogs_path %></p>
+
+<%= link_to 'owner list', root_path %>

@@ -1,0 +1,12 @@
+<h1>Owners#new</h1>
+<p>Find me in app/views/owners/new.html.erb</p>
+<h3>Add Owner</h3>
+<%= form_with model: @owner do |form| %>
+  <p> First Name: <%= form.text_field :first_name %></p>
+  <p>Last Name: <%= form.text_field :last_name %></p>
+  <p>Occupation: <%= form.text_area :occupation %></p>
+  <p>Image url: <%= form.text_field :img_url %></p>
+  <p>Age: <%= form.number_field :age %></p>
+
+  <%= form.submit %>
+<% end %>

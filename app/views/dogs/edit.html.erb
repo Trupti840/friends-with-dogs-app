@@ -1,0 +1,9 @@
+<h3>Edit Dog</h3>
+<%= form_with model: @dog do |form| %>
+  <p>Name: <%= form.text_field :name %></p>
+  <p>Breed: <%= form.text_field :breed %></p>
+  <p>Age: <%= form.number_field :age %></p>
+
+  <p>Owner: <%= form.select :owner_id, Owner.all.map { |owner| [ owner.to_s, owner.id ] } %></p>
+  <%= form.submit %>
+<% end %>

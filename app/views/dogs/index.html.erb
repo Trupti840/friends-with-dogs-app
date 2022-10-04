@@ -1,0 +1,16 @@
+<h1>List of Dogs</h1>
+<ul><% @dogs.each do |dog| %>
+  <li>
+    <%= link_to dog.name, dog_path(dog) %>
+  <% end %></li>
+</ul>
+
+<div><%= link_to 'Create Dog', new_dog_path %></div>
+<%= link_to 'owner list', root_path %>
+<h1>Time : 
+    <p id="timer">
+        <%= Time.now.strftime("%H:%M:%S") %>
+
+
+    </p>
+</h1>
